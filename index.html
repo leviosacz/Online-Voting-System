@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <div id="main">
+
+        <div id="avatar"></div>
+    
+        <div id="login">
+            <div class="account">
+                <div class="errorMsg">NO AUTHENTICATION!</div>
+                <div>
+                    <input type="text" class="username" placeholder="Please enter username">
+                </div>
+                <div>
+                    <input type="password" class="password" placeholder="Please enter password">
+                </div>
+            </div>
+    
+            <div class="loginButtons">
+                <button class="button">Sign in</button>
+                <button type="reset" class="button">Reset</button>
+                <button class="button">Register</button>
+            </div>
+            <script src="./js/login.js"></script>
+
+        </div>
+
+        <div id="register">
+            <div class="account">
+                <div class="errorMsg">Please try later!</div>
+                <div>
+                    <input type="text" class="username" placeholder="Please enter username">
+                </div>
+                <div>
+                    <input type="password" class="password" placeholder="Please enter password">
+                </div>
+                <div>
+                    <input type="password" class="re_pass" placeholder="Please re-enter password">
+                </div>
+            </div>
+    
+            <div class="registerButtons">
+                <button class="button">Finish</button>
+                <button type="reset" class="button">Reset</button>
+                <button class="button">Cancel</button>
+            </div> 
+            <script src="./js/register.js"></script>   
+
+        </div>
+
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,553 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#application{
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* title */
+#title{
+    position:fixed;
+    top: 0px;
+    width: 100%;
+    height: 70px;
+    background-color: #1C2833;
+    overflow: hidden;
+    z-index: 100;
+}
+
+#title div{
+    width:150px;;
+    height:100%;
+    padding:10px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 2;
+    color:white;
+} 
+
+
+/* 
+    Main page:
+        memu list
+        content
+*/
+
+#main{
+    width: 100%;
+    background-color:white;
+    margin-top:70px;
+    overflow: hidden;
+}
+
+
+/* 
+user msg and control
+ */
+#memu{
+    width: 250px;
+    height: 100%;
+    background-color: #2E4053;
+    display:flex;
+    flex-direction:column;
+    box-sizing: border-box;
+    position:fixed;
+    left: 0;
+    top: 70px;
+    z-index: 100;
+}
+
+/* avatar */
+#avatar{
+    width: 100%;
+    height: 70px;
+}
+
+.image{
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    display:inline-block;
+    background: url('../images/avatar.jpg') no-repeat;
+    background-size: cover;
+    margin: 10px 20px;
+    vertical-align: middle;
+}
+
+#memu-list{
+    padding: 10px;
+}
+
+/* memu text */
+.memu-text{
+    display:inline-block;
+    color:white;
+    font-size: 20px;
+    white-space: pre;
+}
+
+/* border */
+.border{
+    width: 100%;
+    height:10px;
+    background-color: #1C2833;
+}
+
+/* memu list */
+.memu-icon{
+    display:inline-block;
+    width:30px;
+    height:30px;
+    margin: 10px;
+    margin-left: 20px;
+    /* margin-top:0; */
+    vertical-align: middle;
+}
+
+.focus{
+    width: 100%;
+    height: 70px;
+    /* margin: 10px auto; */
+    padding: 10px;
+}
+
+.focus:hover{
+    background-color: rgb(9, 77, 139);
+    cursor: pointer;
+}
+
+/* dashboard */
+#memu-dashboard .memu-icon{
+    background:url('../images/dashboard.png') no-repeat center;
+    background-size: cover;
+}
+
+/* votes */
+#memu-votes .memu-icon{
+    background:url('../images/vote.png') no-repeat center;
+    background-size: cover;
+}
+
+#down-icon{
+    width:15px;
+    height:15px;
+    display: inline-block;
+    background: url('../images/down.png') no-repeat center;
+    background-size: cover;
+    margin-left: 35%;
+    vertical-align:sub;
+}
+
+#memu-downList .memu-icon{
+    background:url('../images/createVote.png') no-repeat center;
+    background-size: cover;
+    margin-left: 50px;
+}
+
+/* #memu-downList{
+    display: none;
+} */
+
+/* memu-Account */
+/* sign out */
+#account .memu-icon{
+    background:url('../images/dashboard.png') no-repeat center;
+    background-size: cover;
+}
+
+
+/* 
+    Content
+    viewVotes
+    createVotes
+    dashboard
+ */
+
+/* content-viewVotes */
+#content{
+    position:absolute;
+    left:250px;
+    width:80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contentBlock{
+    margin: 20px;
+}
+
+
+/* 
+    View votes
+*/
+
+#viewVotes{
+    display:none;
+} 
+
+#viewVotes-title{
+    height:auto;
+    font-size:20px;
+    line-height:1.5;
+    border-bottom:1px solid #c7cdd1;
+}
+
+
+/* voteCard */
+.voteCard{
+    box-shadow:0 2px 5px rgba(0,0,0,0.3);
+    border-radius: 4px;
+    overflow:hidden;
+    background-color: white;
+    width: 262px;
+    /* height: 266px; */
+    display:inline-block;
+    vertical-align:top;
+    margin: 36px 0 0 36px;
+    cursor: pointer;
+}
+
+.voteCard-hearderImage{
+    height:146px;
+    display:block;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+/* .voteCard-hearder{
+    height:71px;
+} */
+
+.voteCard-text{
+    margin: 0 auto;
+    padding:12px 18px;
+    line-height: 1.5;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.voteCard-actionContainer{
+    display:flex;
+    flex-direction: row;
+    align-items:flex-end;
+    padding: 0 0 12px;
+    height: 2.5rem;
+}
+
+.voteCard-action{
+    display: flex;
+    flex-direction: row;
+    margin:0 20px;
+}
+
+.voteCard-actionImage{
+    width:15px;
+    height:15px;
+    background: url('../images/person.png') no-repeat center center;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.voteCardDate{
+    position:relative;
+    left:70px;
+}
+
+/* 
+    content: create a vote
+*/
+
+#createVote{
+    display: none;
+}
+
+#createVoteBox{
+    display:flex; 
+    flex-direction: row;
+    width: 100%;
+    background-color:whitesmoke;
+}
+
+#createVoteImageBlock{
+    width:350px;
+    height: 400px;
+    display:flex;
+    flex-direction: column;
+    margin: 20px;
+    padding:10px;
+    
+}
+
+#createVote_defaultImage{
+    height:216px;
+    background: url('../images/bg1.jpg') no-repeat center;
+    background-size: cover;
+}
+
+#createVote_imageOptions{
+    display:flex;
+    flex-direction: row;
+    padding: 10px;
+    overflow: hidden;
+    background-color:#2E4053;
+}
+
+.imageOption{
+    width: 75px;
+    height:50px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#createVoteContent{
+    flex: 1 0 auto;
+    margin:20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#createVoteContent h2{
+    margin-right: 20px;
+}
+
+#createVoteContent input{
+    width: 300px;
+    height: 35px;
+    font-size:18px;
+}
+
+#createVote_title{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+
+#createVote_options{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+#createVote_options input{
+    margin: 10px 0 10px 65px;
+    
+}
+
+#createVote_optionLines{
+    display: flex;
+    flex-direction: column;
+}
+
+#createVote_deleteOption{
+    width:23px;
+    height:23px;
+    border-radius:50%;
+    background:url('../images/delete.png') no-repeat center;
+    background-size: cover;
+    cursor:pointer;
+    margin: 23px 0 0 20px;
+}
+
+#createVote_addOption{
+    margin: 20px 0 0 60px;
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    background: url('../images/add.png') no-repeat center center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+#createVote button{
+    width: 100px;;
+    height:40px;
+    display:block;
+    margin: 20px 0 0 270px;
+    background:#2E4053;
+    border:none;
+    outline:none;
+    color:#fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* open a vote */
+#voteHeader{
+    width:100%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction:row;
+}
+
+#voteImage{
+    width:350px;
+    height: 216px;
+    margin: 20px;
+    background: url('../images/bg1.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+#voteDetails{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin:20px;
+}
+
+.voteDetailLine{
+    width:80%;
+    height:50px;
+    font-size: 20px;
+    line-height:2;
+    display:flex;
+    flex-direction:row;
+}
+
+.voteDetails_custom{
+    margin-left:30px;
+}
+
+/* vote result container */
+.voteContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    background-color: white;
+}
+
+.voteResultLine{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    height: 50px;
+    font-size: 20px;
+    line-height:2;
+    text-align: right;
+    margin: 20px 20px 0;
+}
+
+.histogramLine{
+    width:700px;
+    height:30px;
+    background-color:whitesmoke;
+    margin:5px;
+    display:flex;
+    flex-direction:row;
+    line-height:1.5;
+    margin-left:15px;
+}
+
+.histogramResult{
+    background-color:rgb(88, 86, 86);
+    height:30px;
+    margin-right: 5px;
+}
+
+#voteResults{
+    display:none;
+}
+
+
+/* attend a vote */
+#attendVote{
+    display:flex;
+    flex-direction: row;
+}
+
+.attendVoteOption{
+    width:90%;
+    height:50px;
+    margin:10px 60px;
+    display:flex;
+    flex-direction: row;
+    font-size: 20px;
+    line-height:2;
+}
+
+.attendVoteOption input{
+    margin-right: 30px;
+}
+
+#openVote button{
+    font-size: 20px;
+    line-height:1.5;
+    height:40px;
+    width:150px;
+    /* margin:200px 0 0 300px; */
+    background:#2E4053;
+    color:#fff;
+    cursor: pointer;
+    border:none;
+    outline:none;
+    margin: 10px;
+}
+
+/* button push */
+button:active{
+    position:relative;
+    top: 2px;
+}
+
+#openVote{
+    display:none;
+}
+
+
+/* 
+    content: dashboard
+*/
+
+.dashboardContainer{
+    width:90%;
+    margin: 20px 40px;
+}
+
+.userDetailsLine{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    line-height:2;
+    width: 100%;
+    height: 50px;
+    margin: 10px;
+}
+
+#dashBoardUsername{
+    margin-left: 20px;
+}
+
+#dashBoardButton{
+    margin: 10px 20px 30px 20px;
+    width:100px;
+    height: 30px;
+    font-size:20px;
+    color: #fff;
+    background-color:#2E4053;
+}
+
+#dashBoardViewTable tr{
+    height: 40px;
+    font-size: 18px;
+}
+
+#dashBoardViewTable td{
+    text-align: center;
+}
+
+#dashBoardViewVotes{
+    display: none;
+}
+
+.dashBoardViewSelected{
+    cursor: pointer;
+}

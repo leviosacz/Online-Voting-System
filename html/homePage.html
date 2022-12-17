@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homePage</title>
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+
+    <div id="application">
+        <div id="title">
+            <div>COEN 241</div>
+        </div>
+    
+        <div id="main">
+            <div id="memu">
+                <div id="avatar">
+                    <div class="image"></div>
+                    <div id="username" class="memu-text">Hello, admin!</div>
+                </div>
+    
+                <div class="border"></div>
+    
+                <div id="memu-list" >
+                    <div id="memu-dashboard" class="focus">
+                        <div class="memu-icon" ></div>
+                        <div class="memu-text">Dashboard</div>
+                    </div>
+    
+                    <div id="memu-votes" >
+                        <div id="memu-downControl" class="focus">
+                            <div class="memu-icon" ></div>
+                            <div class="memu-text"> Votes</div>
+                            <div id="down-icon"></div>
+                        </div>
+                        
+                        <div id="memu-downList">
+                            <div id="memu-createVote" class="focus">
+                                <div class="memu-icon"></div>
+                                <div class="memu-text"> Create</div>
+                            </div>
+    
+                            <div id="memu-viewVote" class="focus">
+                                <div class="memu-icon"></div>
+                                <div class="memu-text"> View</div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div id="account">
+                        <div id="signout" class="focus">
+                            <div class="memu-icon" ></div>
+                            <div class="memu-text">Sign Out</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content">
+                <div id="dashboard" class="contentBlock">
+                    <div style="display:flex;flex-direction:column;width:100%;background-color:whitesmoke;">
+                        <div class="dashboardContainer">
+                            <div style="line-height:1.5;margin-bottom:20px;border-bottom: 1px solid #c7cdd1;font-size:30px;">Dashboard</div>
+
+                            <div style="display:flex;flex-direction:row;">
+                                <div style="width:350px;height:250px;background:url('../images/bg1.jpg') no-repeat center; background-size: cover;border-radius:5px;box-shadow:5px 5px 5px rgba(0, 0,0,0.5);margin:20px 20px 20px 0px;">
+                                </div>
+
+                                <div style="display:flex;flex-direction:column;margin:20px;">
+                                    <div class="userDetailsLine">
+                                        <div >Username: </div>
+                                        <div id="dashBoardUsername">Admin</div>
+                                    </div>
+                                    <div class="userDetailsLine">
+                                        <div>Created votes: </div>
+                                        <button type="button" id="dashBoardButton">View</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="dashboardContainer" id="dashBoardViewVotes">
+                            <div style="line-height:1.5;margin-bottom:20px;border-bottom: 1px solid #c7cdd1;font-size:30px;">Created Votes</div>
+
+                            <div>
+                                <table cellspacing="2" id="dashBoardViewTable" width="100%" border="1">
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>Date</th>
+                                        <th>Participants</th>
+                                    </tr>
+                                    <tr class="dashBoardViewSelected">
+                                        <td>Welcome to vote!</td>
+                                        <td>2022-11-24</td>
+                                        <td>0</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="viewVotes" class="contentBlock">
+                    <div id="viewVotes-title">
+                        <h1>Votes</h1>
+                    </div>
+    
+                    <div id="viewVotes-container" style="display:block">
+                        <div id="votesCardBox" style="padding-top: 20px;">
+                            <div class="voteCard" style="opacity: 1;">
+                                <div class="voteCard-hearderImage" style="background-image:url('../images/bg1.jpg')"></div>
+
+                                <div class="voteCard-hearder">
+                                    <div class="voteCard-text">
+                                        <h3>Welcome to vote!</h3>
+                                    </div>
+                                </div>
+
+                                <div class="voteCard-actionContainer">
+                                    <div class="voteCard-action">
+                                        <div class="voteCard-actionImage"></div>
+                                        <div class="vote-participants">0</div>
+                                    </div>
+                                    <div class="voteCard-action voteCardDate">
+                                        <div>2022-11-24</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="createVote" class="contentBlock">
+                    <div id="createVoteBox">
+                        <div id="createVoteImageBlock">
+                            <div id="createVote_defaultImage"></div>
+                            <div id="createVote_imageOptions">
+                                <div class="imageOption" style="background-image: url('../images/bg1.jpg');"></div>
+                                <div class="imageOption" style="background-image: url('../images/bg4.jpg');"></div>
+                                <div class="imageOption" style="background-image: url('../images/bg3.jpg');"></div>
+                                <div class="imageOption" style="background-image: url('../images/bg2.jpg');"></div>
+                            </div>
+                        </div>
+
+                        <div id="createVoteContent">
+                            <div id="createVote_title">
+                                <h2>Title</h2>
+                                <input type="text" placeholder="Please enter vote title">
+                            </div>
+
+                            <div id="createVote_options">
+                                <h2>Options</h2>
+                                <div id="createVote_optionLines">
+                                    <input type="text" placeholder="Please enter an option">
+                                    <input type="text" placeholder="Please enter an option">
+                                </div>
+                                <div style="display:flex;flex-direction:row;">
+                                    <div id="createVote_addOption"></div>
+                                    <div id="createVote_deleteOption"></div>
+                                </div>
+                                
+                            </div>
+
+                            <button >Submit</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="openVote" class="contentBlock">
+                    <div style="display:flex;flex-direction:column;width:100%;background-color:whitesmoke;">
+                        <div id="voteHeader">
+                            <div id="voteImage"></div>
+                            <div id="voteDetails">
+                                <div class="voteDetailLine">
+                                    <div style="white-space:pre;">Title:     </div>
+                                    <div class="voteDetails_custom">Welcome to vote!</div>
+                                </div>
+
+                                <div class="voteDetailLine">
+                                    <div>Sponsor: </div>
+                                    <div class="voteDetails_custom">Admin</div>
+                                </div>
+
+                                <div class="voteDetailLine">
+                                    <div style="white-space:pre;">Date:      </div>
+                                    <div class="voteDetails_custom">2022-11-24</div>
+                                </div>
+
+                                <div class="voteDetailLine">
+                                    <div style="white-space:pre;">Voters:    </div>
+                                    <div class="voteDetails_custom">0</div>
+                                </div>
+
+                                <div class="voteDetailLine" id="deleteVote">
+                                    <button type="button">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="voteResults" class="voteContainer">
+                            <div class="voteResultLine">
+                                <div style="width:100px;">option1</div>
+                                <div class="histogramLine">
+                                    <div style="width:35%;" class="histogramResult"></div>
+                                    <div>35%</div>
+                                </div>
+                            </div>
+
+                            <div class="voteResultLine">
+                                <div style="width:100px;">option2</div>
+                                <div class="histogramLine">
+                                    <div style="width:25%;" class="histogramResult"></div>
+                                    <div>25%</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="attendVote" class="voteContainer">
+                            <div style="width:60%;">
+                                <div class="attendVoteOption">
+                                    <input type="radio" name="vote">
+                                    <div>option1</div>
+                                </div>
+                                <div class="attendVoteOption">
+                                    <input type="radio" name="vote">
+                                    <div>option2</div>
+                                </div>
+                            </div>
+
+                            <div style="position:absolute;right:40px; bottom: 40px;">
+                                <button type="button">Submit</button>
+                                <button type="button">View Results</button>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <script src="../js/home.js"></script>
+        </div>
+    </div>
+    
+
+</body>
+</html>
