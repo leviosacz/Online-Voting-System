@@ -17,3 +17,9 @@ Amazon API Gateway and AWS lambda functions can implement the connection between
 ![2](https://user-images.githubusercontent.com/87473423/208269453-bc9763b5-8107-4ccd-97d9-ad1041a9ef8b.png)
 ### View Result
 ![3](https://user-images.githubusercontent.com/87473423/208269463-4f2f3a41-90fa-4d16-b348-3ecc6019d4be.png)
+
+## System Architecture
+![Serverless_Architecture](https://user-images.githubusercontent.com/87473423/208269525-cb0c282c-529a-47f0-9843-3eda7ccf244d.jpg)
+
+## Software Architecture
+![software_architecture](https://user-images.githubusercontent.com/87473423/208269552-cee01900-9d55-4ba6-badd-33b1ac0835a7.png)
